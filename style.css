@@ -1,14 +1,21 @@
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
+/* ── NAVBAR ── */
 .headcontainer {
-    width: 100%;
-    padding: 15px 40px;
-    white-space: nowrap;   
+    width: 100vw;
+    height: 10vh;
+    padding: 0 40px;
+    overflow: hidden;
 }
 
 .img,
@@ -16,58 +23,45 @@
 .user {
     display: inline-block;
     vertical-align: middle;
+    height: 10vh;
+    line-height: 10vh;
 }
 
-.img {
-    width: 10vw;
-}
+.img { width: 10vw; }
 
 .img img {
     width: 80px;
+    vertical-align: middle;
 }
 
-.buttoncontainer {
-    width: 60vw;
-    text-align: center;
-}
-
-.user {
-    width: 15vw;
-    text-align: right;
-}
-
+.buttoncontainer { width: 62vw; text-align: center; }
 
 .buttoncontainer a {
+    display: inline-block;
     text-decoration: none;
     color: gray;
     font-size: 18px;
     margin: 0 15px;
     font-family: sans-serif;
-    padding-bottom: 3px;
-    border-bottom: 2px solid transparent;
-    transition: color 0.25s, border-color 0.25s;
 }
-
 
 .buttoncontainer a:hover {
     color: rgb(36, 160, 237);
-    border-bottom: 2px solid rgb(36, 160, 237);
 }
 
+.user { width: 14vw; text-align: right; }
 
 .user a {
-    color: rgb(78, 123, 141);
-    font-size: 18px;
-    background-color: rgb(186, 223, 236);
     display: inline-block;
-    width: 100px;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 18px;
-    border-radius: 8px;
     text-decoration: none;
+    color: rgb(78, 123, 141);
+    background-color: rgb(186, 223, 236);
+    font-size: 16px;
+    padding: 8px 18px;
+    border-radius: 8px;
     font-family: sans-serif;
-    transition: background-color 0.25s, color 0.25s;
+    line-height: normal;
+    vertical-align: middle;
 }
 
 .user a:hover {
@@ -75,84 +69,74 @@
     color: white;
 }
 
-
+/* ── HERO SECTION ── */
 .content {
-    padding: 5vh 8vw;
-    min-height: 85vh;      
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* LEFT div */
+.left {
+    float: left;
+    width: 45vw;
+    height: 90vh;
+    padding: 6vh 3vw 0 5vw;
     overflow: hidden;
 }
 
- {
-    float: right;
-    width: 48vw;
-    padding-top: 4vh;
-}
-
-.hero-image img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-/* Keep original class name too so HTML doesn't break */
-.rightdiv img {
-    float: right;
-    width: 48vw;
-    border-radius: 12px;
-}
-
-.rightdiv {
-    padding-top: 4vh;
-}
-
-/* Text block */
-.centre {
-    padding-top: 6vh;
-}
-
-.centre h1 {
-    font-size: 4vw;
+.left h1 {
+    font-size: 3.2vw;
     font-family: sans-serif;
     line-height: 1.2;
 }
 
-.ls {
+.left h1 span {
     color: skyblue;
 }
 
-.centre p {
+.left p {
     color: gray;
-    font-size: 1.2vw;
-    margin-top: 3vh;
+    font-size: 1.1vw;
+    margin-top: 2.5vh;
     font-family: sans-serif;
-    max-width: 45vw;
     line-height: 1.6;
 }
 
-
-.hero-button {
-    margin-top: 4vh;
-    display: inline-block;   
-}
-
-.hero-button a,
-.rightdiv a {
+.left a {
+    display: inline-block;
+    margin-top: 3vh;
     text-decoration: none;
-    font-size: 1vw;
     color: white;
     background-color: rgb(36, 160, 237);
-    display: inline-block;
-    padding: 1.5vh 2vw;
+    font-size: 1vw;
+    padding: 1.2vh 2vw;
     border-radius: 10px;
     font-family: sans-serif;
-    transition: opacity 0.25s, box-shadow 0.25s, transform 0.2s;
 }
 
-/* Hover effect on CTA button */
-.hero-button a:hover,
-.rightdiv a:hover {
+.left a:hover {
     opacity: 0.85;
-    box-shadow: 0 6px 20px rgba(36, 160, 237, 0.45);
-    transform: translateY(-2px);
+}
+
+/* RIGHT div — image */
+.right {
+    float: right;
+    width: 55vw;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.right img {
+    position: absolute;
+    top: 5vh;
+    left: 2vw;
+    width: 88%;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 
