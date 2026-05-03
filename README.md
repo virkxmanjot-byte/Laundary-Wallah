@@ -1,16 +1,29 @@
-# Laundary-Wallah
->>Project Description
+# Laundry Wallah
 
-This project is a basic responsive laundry service website built using HTML and CSS.
-It represents a homepage for a fictional service called Laundry Wallah, showcasing navigation links, branding, service information, and a call-to-action button.
+This is a landing page for a laundry service called Laundry Wallah. I made this project to practice CSS layout concepts like display, float, position, and overflow along with viewport units.
 
-The goal of this project is to demonstrate:
+## What I learned
 
-> Proper HTML structure
-> CSS styling and layout techniques
-> Basic responsiveness for different screen sizes
+**display: inline-block** — I used this for the navbar. The logo, nav links, and username button all sit on one line because of inline-block. I also used vertical-align: middle to keep them properly aligned in the center.
 
->>How to Open the Project
-1. Keep all files in the same folder
-2. Open index.html using any browser (Chrome, Edge, etc.)
-3. Ensure images (logo.png, main.jpeg) are present, otherwise they won’t display
+**float** — The hero section has two divs side by side. The left div has the heading, description, and button, and the right div has the image. I used float: left and float: right to place them next to each other.
+
+**position** — I used position: relative on the right div and position: absolute on the image inside it so the image stays properly placed within that div.
+
+**overflow: hidden** — I used this on html and body to stop the page from scrolling. Also used it on individual divs so content does not spill outside.
+
+**Viewport units (vw / vh)** — Instead of fixed px values, I used vw for widths and vh for heights. This way the whole page fits inside the browser window without any scrolling.
+
+## How to run
+
+Download all files and keep them in the same folder like this:
+
+```
+project/
+  index.html
+  style.css
+  main.jpeg
+  logo.png
+```
+
+Then just open index.html in any browser.
